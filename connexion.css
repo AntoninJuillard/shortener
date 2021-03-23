@@ -1,0 +1,232 @@
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.home_container{
+    width: 100vw;
+    height: 100vh;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_container .home_form{
+    width: 28.672vw;
+    height: 31.638vw;
+    background: #C4C4C4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_form_moove{
+    animation-name: moove;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moove{
+    100%{
+        transform: translateX(-19.028vw);
+    }
+}
+
+.home_container .home_form p{
+    width: 20.904vw;
+    height: 3.390vw;
+    font-size: 1.806vw;
+    background: #D6D6D6;
+    margin-top: 4.444vw;
+    text-align: center;
+    line-height: 3.390vw;
+    margin-bottom: 0;
+}
+
+.home_container .home_form input{
+    width: 20.904vw;
+    height: 3.390vw;
+    font-size: 1.806vw;
+    background: #F6F5F5;
+    color: #C4C4C4;
+    margin-top: 42px;
+    text-align: center;
+    line-height: 3.390vw;
+    border: 0px solid #F6F5F5;
+}
+
+.home_container .home_form .home_form_submit-button{
+    width: 9.494vw;
+    height: 3.841vw;
+    font-size: 1.111vw;
+    background: #F3CCCC;
+    box-shadow: 0 4px 8px 0 #00000040;
+    border-radius: 1.042vw;
+    text-transform: capitalize;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.home_container .home_new-account-button{
+    width: 6.922vw;
+    height: 3.841vw;
+    font-size: 0.903vw;
+    background: #F3CCCC;
+    box-shadow: 0 4px 8px 0 #00000040;
+    border-radius: 1.042vw;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 700;
+    border: 0px solid #F6F5F5;
+    margin-right: 2.917vw;
+    position: relative;
+    top: -0.556vw;
+}
+
+.home_container .home_new-account-button a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.home_container .home_form .home_form_submit-register-button{
+    width: 20.903vw;
+}
+
+.form_label{
+    margin-top: 7.292vw;
+    font-size: 1.7vw;
+    font-weight: 700;
+}
+
+.account-button{
+    width: 8.059vw;
+    height: 8.059vw;
+    position: absolute;
+    top: 1.389vw;
+    right: 1.389vw;
+    text-align: center;
+    line-height: 8.059vw;
+    background: #C4C4C4;
+    box-shadow: 0 4px 8px 0 #00000040;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 1.042vw;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.copylink-button{
+    width: 20.904vw;
+    height: 9.435vw;
+    font-size: 1.128vw;
+    text-align: center;
+    line-height: 9.435vw;
+    cursor: pointer;
+    background: #E8E1E1;
+    margin-top: 6.875vw;
+    box-shadow: 0 4px 8px 0 #00000040;
+    border-radius: 1.042vw; 
+}
+
+.newlink-button{
+    margin-top: 4.097vw;
+    line-height: auto;
+    text-align: center;
+    line-height: 3.841vw;
+}
+
+.account_zone{
+    z-index: 1;
+    width: 33.351vw;
+    height: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.account_container{
+    z-index: 2;
+    width: 33.351vw;
+    height: 100vw;
+    position: relative;
+    top: 0;
+    right: 0;
+    background: #B9ACAC;
+    transform: translateX(33.351vw);
+}
+
+.account_container_reveal{
+    animation-name: reveal;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    transform: translateX(33.351vw);
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes reveal{
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.account_link-title{
+    font-size: 1.528vw;
+    padding-top: 10.208vw;
+    padding-left: 1.736vw;
+}
+
+.account_link-container{
+    height: 25.255vw;
+    width: 33.333vw;
+    background: #C4C4C4;
+    margin-top: 0.625vw;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.account_link-element{
+    width: 31.880vw;
+    height: 2.260vw;
+    background: #A98080;
+    margin-top: 0.764vw;
+    display: flex;
+    align-items: center;
+}
+
+.account_link-element_title{
+    margin-left: 1.042vw;
+}
+
+.account_link-element_state{
+    width: 1.256vw;
+    height: 1.256vw;
+    background: #14FF00;
+    border: 0.028vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-left: 3.819vw;
+}
+
+.account_link-element_activate-button{
+    width: 7.872vw;
+    height: 1.346vw;
+    margin-left: 1.944vw;
+    background: #C4C4C4;
+    text-align: center;
+    cursor: pointer;
+    color: red;
+}
+
+.account_link-element_views{
+    width: 7.872vw;
+    height: 1.346vw;
+    margin-left: 1.944vw;
+    background: #C4C4C4;
+    display: flex;
+    justify-content: space-around;
+}
