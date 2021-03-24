@@ -17,8 +17,12 @@ include 'addlink.php'
         <form method="POST" action="createlink.php" class="home_form">
             <label for="lien" class="form_label">Rentrez votre lien</label>
             <input type="text" name="lien" id="lien" placeholder="mettre lien ici">
-            <input type="submit" value="GO" class="home_form_submit-button home_form_submit-register-button"/>
+            <input type="submit" name="submit" value="GO" class="home_form_submit-button home_form_submit-register-button"/>
+            <div class="short-url-container">
+                <?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>
+            </div>
         </form>
+        
     </div>
     <div class="account_zone">
         <div class="account_container">

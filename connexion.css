@@ -230,3 +230,13 @@ body{
     display: flex;
     justify-content: space-around;
 }
+
+.short-url-container{
+    width: 20.904vw;
+    height: 3.390vw;
+    font-size: 1.806vw;
+    background: #F6F5F5;
+    margin-top: 42px;
+    text-align: center;
+    line-height: 3.390vw;
+}
