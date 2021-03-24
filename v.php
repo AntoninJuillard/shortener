@@ -43,9 +43,11 @@ if ($result->num_rows > 0) {
     echo "l'url est presente dans la table";
     echo " ---> voici le lien de base :  ";
     echo $row['urlbase'];
-    // donc rediriger vers l'url rentré par l'utilisateur à la base
+    echo "    -    donc rediriger vers ";
+    echo $row['urlbase'];
 } else {
-    echo "l'url n'est PAS presente dans la table";
+    echo "l'url n'est PAS presente dans la table ";
+    echo " rediriger vers erreur 404";
     // donc afficher une erreur 404
     // header("HTTP/1.0 404 Not Found"); MARCHE PAS // source : https://www.php.net/manual/fr/function.header.php
     // apparement si header() n'est pas seul tout en haut du php ca marche pas ? ???
