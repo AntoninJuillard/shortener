@@ -11,9 +11,9 @@ $urlbase = $_POST['lien'];
 $urlshort = $alphabetsmall[rand(0,25)] . $alphabetbig[rand(0,25)] . rand(10,99) . '_' . $alphabetbig[rand(0,25)] . $alphabetbig[rand(0,25)];
 //echo $urlshort;
 
-echo $urlbase;
-echo 'short:';
-echo $urlshort;
+//echo $urlbase;
+//echo 'short:';
+//echo $urlshort;
 
 
 $servername = 'localhost';
@@ -63,6 +63,6 @@ $conn->query($sql);
 $sql = "INSERT INTO urlsystem (urlbase, urlshort)
 VALUES ('$urlbase', '$urlshort')";
 
-$conn->query($sql)
+$conn->query($sql);
 
 ?>

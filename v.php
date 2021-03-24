@@ -38,19 +38,16 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 // $row[''] <- pour accéder aux données
 
+$urlsentto = $row['urlbase'];
+$urlshortened = $row['urlshort'];
 
 if ($result->num_rows > 0) {
-    echo "l'url est presente dans la table";
-    echo " ---> voici le lien de base :  ";
-    echo $row['urlbase'];
-    echo "    -    donc rediriger vers ";
-    echo $row['urlbase'];
+    // source fonction header : https://www.php.net/manual/fr/function.header.php
+    // envoyer l'utilisateur à l'adresse associé à l'url short entré
+    header("Location: $urlsentto");
 } else {
-    echo "l'url n'est PAS presente dans la table ";
-    echo " rediriger vers erreur 404";
-    // donc afficher une erreur 404
-    // header("HTTP/1.0 404 Not Found"); MARCHE PAS // source : https://www.php.net/manual/fr/function.header.php
-    // apparement si header() n'est pas seul tout en haut du php ca marche pas ? ???
+    // rediriger / afficher une erreur 404
+    header("Location: HTTP/1.0 404 Not Found");  
 };
 
 ?>

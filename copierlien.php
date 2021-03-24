@@ -11,7 +11,10 @@
     <div class="home_container">
         <div class="account-button">mon compte</div>
         <div class="home_buttons home_form" >
-            <div class="copylink-button">CLICK ICI POUR COPIER LE LIEN</div>
+            <div class="copylink-button">
+                CLICK ICI POUR COPIER LE LIEN : 
+                <?php echo $urlshortened ?>
+            </div>
             <div class="newlink-button home_form_submit-button">NOUVEAU LIEN</div>
         </div>
     </div>
