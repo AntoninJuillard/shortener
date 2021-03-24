@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM users WHERE email='$email' AND pass='$password'";
 // source aide : https://stackoverflow.com/questions/42050614/mysqli-queryconn-sql-or-conn-querysql
-// faire la requête = 
+// resultat la requête = 
 $result = $conn->query($sql);
 
 // check si il y a des résultats à la requête (= si les identifiants sont dans la base de données)

@@ -21,21 +21,34 @@ if ($conn->connect_error) {
     //echo "connecté!";
 }
 
-// afficher quelque chose en fonction de la key dans l'url
-// source aide : https://www.php.net/manual/fr/reserved.variables.get.php 
-//$rediriger = $_GET["key"];
-// echo $rediriger;
-
-// source pour parse_url : https://www.php.net/manual/fr/function.parse-url.php
-
-$url = 'http://localhost:8888/shortener/v.php?key=uI29_EN';
+// recuperer la key de l'url
 
 $key = $_GET["key"];
-echo $key;
-// recuperer ce qu'il y a après le '?' dans l'url
-$urlparsequery = parse_url($url, PHP_URL_QUERY);
-settype($urlparsequery, "string");
-echo $urlparsequery;
 
+// source aide : https://www.w3schools.com/sql/sql_select.asp
+// selectionner les lignes de la table ou la key apparait
+$sql = "SELECT * FROM urlsystem WHERE urlshort='$key'";
+// source aide : https://stackoverflow.com/questions/42050614/mysqli-queryconn-sql-or-conn-querysql
+
+// resultat la requête = 
+$result = $conn->query($sql);
+
+// mettre le resultat de la requete dans un tableau associatif 
+//source fonction fetch_assoc = https://www.w3schools.com/php/php_mysql_select.asp 
+$row = $result->fetch_assoc();
+// $row[''] <- pour accéder aux données
+
+
+if ($result->num_rows > 0) {
+    echo "l'url est presente dans la table";
+    echo " ---> voici le lien de base :  ";
+    echo $row['urlbase'];
+    // donc rediriger vers l'url rentré par l'utilisateur à la base
+} else {
+    echo "l'url n'est PAS presente dans la table";
+    // donc afficher une erreur 404
+    // header("HTTP/1.0 404 Not Found"); MARCHE PAS // source : https://www.php.net/manual/fr/function.header.php
+    // apparement si header() n'est pas seul tout en haut du php ca marche pas ? ???
+};
 
 ?>

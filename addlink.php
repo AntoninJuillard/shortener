@@ -7,7 +7,8 @@ $alphabetbig = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 
 $urlbase = $_POST['lien'];
-$urlshort = $alphabetsmall[rand(0,25)] . $alphabetbig[rand(0,25)] . rand(0,99) . '_' . $alphabetbig[rand(0,25)] . $alphabetbig[rand(0,25)];
+// http://localhost:8888/shortener/v.php?key=
+$urlshort = $alphabetsmall[rand(0,25)] . $alphabetbig[rand(0,25)] . rand(10,99) . '_' . $alphabetbig[rand(0,25)] . $alphabetbig[rand(0,25)];
 //echo $urlshort;
 
 echo $urlbase;
