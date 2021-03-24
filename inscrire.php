@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
 
     // créer une nouvelle base de données si elle n'est pas déjà créé 
     $sql = "CREATE DATABASE IF NOT EXISTS logindb";
-
+        
 
     // se connecter à la base de données
     $conn = new mysqli($servername, $username, $userpassword, 'logindb');
@@ -40,6 +40,8 @@ if(isset($_POST['submit']))
     email VARCHAR(100) NOT NULL,
     pass VARCHAR(100) NOT NULL
     )";
+    // faire la requete ----- si bug c ici 
+    $conn->query($sql);
 
     // selectionner les lignes de la table ou l'email et le password entrer apparaissent
     // source aide : https://www.w3schools.com/sql/sql_select.asp

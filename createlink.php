@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+include 'addlink.php'
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
