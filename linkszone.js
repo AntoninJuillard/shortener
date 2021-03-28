@@ -3,6 +3,8 @@ const accountContainer = accountZone.querySelector('.account_container')
 const homeContainer = document.querySelector('.home_container')
 const accountButton = homeContainer.querySelector('.account-button')
 const homeForm = homeContainer.querySelector('.home_form')
+const newLinkButton = homeContainer.querySelector('.newlink-button')
+
 // Si le bouton est en mode ouvrir la partie mon compte
 // ou en mode se déconnecter 
 let accountButtonChange = false
@@ -14,7 +16,7 @@ accountButton.addEventListener('click',() =>
 {
     if(accountButtonChange === true) 
     {
-        window.location.href="connexion.html" 
+        window.location.href="connexion.php" 
         console.log(accountButtonChange);
     } else {
         accountContainer.classList.add('account_container_reveal')
@@ -23,4 +25,9 @@ accountButton.addEventListener('click',() =>
         accountButtonChange = true
         console.log(accountButtonChange);
     }
+})
+
+newLinkButton.addEventListener('click', () => 
+{
+    window.location.href="createlink.php" 
 })

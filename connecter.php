@@ -34,9 +34,11 @@ $result = $conn->query($sql);
 ?>
 
 <?php if ($result->num_rows > 0) { ?>
+    <?php session_start(); ?>
+    <?php $_SESSION['email'] = $email;?>
     <?php include 'createlink.php'; ?>
 <?php } else { ?>
-    <?php include 'connexion.html'; ?>
+    <?php include 'connexion.php'; ?>
 <?php }; ?>
 </body>
 </html>

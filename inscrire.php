@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
 
     // créer une nouvelle base de données si elle n'est pas déjà créé 
     $sql = "CREATE DATABASE IF NOT EXISTS logindb";
-        
+    $connect->query($sql);
 
     // se connecter à la base de données
     $conn = new mysqli($servername, $username, $userpassword, 'logindb');
@@ -55,6 +55,8 @@ if(isset($_POST['submit']))
     if ($result->num_rows > 0) {
         include 'inscription.php';
     } else {
+        session_start();
+        $_SESSION['email'] = $email;
         // insérer les nouveaux identifiants dans la base de données
         // source pour aider insertion : https://forums.commentcamarche.net/forum/affich-1602964-variable-php-dans-requete-mysql
         $sql = "INSERT INTO users (email, pass)

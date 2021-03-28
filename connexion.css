@@ -121,7 +121,7 @@ body{
 .copylink-button{
     width: 20.904vw;
     height: 9.435vw;
-    font-size: 1.128vw;
+    font-size: 0.88vw;
     text-align: center;
     line-height: 9.435vw;
     cursor: pointer;
@@ -184,8 +184,6 @@ body{
     width: 33.333vw;
     background: #C4C4C4;
     margin-top: 0.625vw;
-    display: flex;
-    justify-content: center;
     overflow: scroll;
 }
 
