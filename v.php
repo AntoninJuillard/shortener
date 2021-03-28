@@ -44,6 +44,17 @@ $urlshortened = $row['urlshort'];
 if ($result->num_rows > 0) {
     // source fonction header : https://www.php.net/manual/fr/function.header.php
     // envoyer l'utilisateur à l'adresse associé à l'url short entré
+
+    // update les views du lien 
+    // source : https://www.w3schools.com/php/php_mysql_update.asp
+    $sql = "UPDATE urlsystem SET views=views+1 WHERE urlshort='$key'";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully";
+    } else {
+    echo "Error updating record: " . $conn->error;
+    }
+
     header("Location: $urlsentto");
 } else {
     // rediriger / afficher une erreur 404

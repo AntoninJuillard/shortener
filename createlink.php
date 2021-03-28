@@ -39,7 +39,8 @@ id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 urlbase VARCHAR(100) NOT NULL,
 urlshort VARCHAR(100) NOT NULL,
 activated VARCHAR(100) NOT NULL,
-email VARCHAR(100) NOT NULL
+email VARCHAR(100) NOT NULL,
+views INT
 )";
 // faire la requete 
 $conn->query($sql);
@@ -83,7 +84,9 @@ $sessionresult = $conn->query($sql);
                         <?php echo '<div class="account_link-element_activate-button">desactiver</div>'; ?>
                         <?php echo '<div class="account_link-element_views">'; ?>
                             <?php echo '<div class="icon"></div>'; ?>
-                            <?php echo '<div class="number">0</div>'; ?>
+                            <?php echo '<div class="number"> views ='; ?>
+                                <?php print_r($rows[5]); ?>
+                            <?php echo '</div>'; ?>
                         <?php echo '</div>'; ?>
                     <?php echo '</div>'; ?>
                 <?php } ?>

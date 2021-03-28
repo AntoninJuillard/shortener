@@ -55,7 +55,8 @@ if(isset($_POST['submitlink']))
     urlbase VARCHAR(100) NOT NULL,
     urlshort VARCHAR(100) NOT NULL,
     activated VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
+    email VARCHAR(100) NOT NULL,
+    views INT 
     )";
     // faire la requete 
     $conn->query($sql);
@@ -64,8 +65,8 @@ if(isset($_POST['submitlink']))
     session_start();
     $sessionemail = $_SESSION['email'];
     // source pour aider insertion : https://forums.commentcamarche.net/forum/affich-1602964-variable-php-dans-requete-mysql
-    $sql = "INSERT INTO urlsystem (urlbase, urlshort, activated, email)
-    VALUES ('$urlbase', '$urlshort', 'true', '$sessionemail')";
+    $sql = "INSERT INTO urlsystem (urlbase, urlshort, activated, email, views)
+    VALUES ('$urlbase', '$urlshort', 'true', '$sessionemail', 0)";
 
     $conn->query($sql);
 
@@ -74,6 +75,10 @@ if(isset($_POST['submitlink']))
     
     // help to loop on the result of the request https://phppot.com/mysql/mysql-fetch-using-php/ 
 
+    // if(isset($_POST['activation-button']))
+    // {
+    //     echo 'activation button set';
+    // };
     
 };
 
@@ -107,10 +112,14 @@ if(isset($_POST['submitlink']))
                             <?php print_r($rows[1]); ?>
                         <?php echo '</div>'; ?>
                         <?php echo '<div class="account_link-element_state"></div>'; ?>
-                        <?php echo '<div class="account_link-element_activate-button">desactiver</div>'; ?>
+                        
+                        <?php echo '<input type="submit" name="activation-button" class="account_link-element_activate-button" value="desactiver">'; ?>
+                        
                         <?php echo '<div class="account_link-element_views">'; ?>
                             <?php echo '<div class="icon"></div>'; ?>
-                            <?php echo '<div class="number">0</div>'; ?>
+                            <?php echo '<div class="number"> views ='; ?>
+                                <?php print_r($rows[5]); ?>
+                            <?php echo '</div>;' ?>
                         <?php echo '</div>'; ?>
                     <?php echo '</div>'; ?>
                 <?php } ?>

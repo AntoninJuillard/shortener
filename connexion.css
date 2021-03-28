@@ -238,3 +238,8 @@ body{
     text-align: center;
     line-height: 3.390vw;
 }
+
+.activation-form p{
+    display: inline-block;
+    font-size: 0.7rem;
+}
