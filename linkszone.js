@@ -16,7 +16,7 @@ accountButton.addEventListener('click',() =>
 {
     if(accountButtonChange === true) 
     {
-        window.location.href="connexion.php" 
+        window.location.href="connection.php" 
         console.log(accountButtonChange);
     } else {
         accountContainer.classList.add('account_container_reveal')

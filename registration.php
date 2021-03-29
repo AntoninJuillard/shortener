@@ -1,4 +1,5 @@
 <?php
+    include 'register.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
-    <link rel="stylesheet" href="connexion.css">
+    <link rel="stylesheet" href="connection.css">
 </head>
 <body>
     <div class="home_container">
-        <form method="POST" class="home_form" action="inscrire.php">
+        <form method="POST" class="home_form" action="registration.php">
             <input type="email" name="email" id="email" placeholder="email">
             <input type="password" name="password" id="password" placeholder="password">
             <input type="password" name="password" id="password" placeholder="password">
