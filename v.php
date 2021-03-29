@@ -26,15 +26,15 @@ if ($conn->connect_error) {
 $key = $_GET["key"];
 
 // source aide : https://www.w3schools.com/sql/sql_select.asp
-// selectionner les lignes de la table ou la key apparait
-$sql = "SELECT * FROM urlsystem WHERE urlshort='$key'";
+// selectionner les lignes de la table ou la key apparait et ou activated est = true 
+$sql = "SELECT * FROM urlsystem WHERE urlshort='$key' AND activated='true'";
 // source aide : https://stackoverflow.com/questions/42050614/mysqli-queryconn-sql-or-conn-querysql
 
 // resultat la requête = 
 $result = $conn->query($sql);
 
 // mettre le resultat de la requete dans un tableau associatif 
-//source fonction fetch_assoc = https://www.w3schools.com/php/php_mysql_select.asp 
+// source fonction fetch_assoc = https://www.w3schools.com/php/php_mysql_select.asp 
 $row = $result->fetch_assoc();
 // $row[''] <- pour accéder aux données
 
@@ -50,9 +50,9 @@ if ($result->num_rows > 0) {
     $sql = "UPDATE urlsystem SET views=views+1 WHERE urlshort='$key'";
 
     if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+        //echo "Record updated successfully";
     } else {
-    echo "Error updating record: " . $conn->error;
+        echo "Error updating record: " . $conn->error;
     }
 
     header("Location: $urlsentto");

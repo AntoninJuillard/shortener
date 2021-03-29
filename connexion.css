@@ -210,6 +210,16 @@ body{
     margin-left: 3.819vw;
 }
 
+.account_link-element_stateoff{
+    width: 1.256vw;
+    height: 1.256vw;
+    background: #FF0000;
+    border: 0.028vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-left: 3.819vw;
+}
+
 .account_link-element_activate-button{
     width: 7.872vw;
     height: 1.346vw;
