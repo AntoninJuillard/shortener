@@ -109,7 +109,7 @@ if(isset($_GET['change']))
                 } else {
                     echo "Error updating record: " . $conn->error;
                 }
-            } else {
+            } else if($rowsid[3] == 'true'){
                 $sql = "UPDATE urlsystem SET activated='true' WHERE id='$idchange'";
                 if ($conn->query($sql) === TRUE) {
                     //echo "Record updated successfully";
