@@ -1,5 +1,5 @@
 <?php
-    include 'register.php';
+    include 'includes/register.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
