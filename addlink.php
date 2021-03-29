@@ -1,4 +1,5 @@
 <?php
+
 // source fonction rand = https://www.php.net/manual/fr/function.rand.php
 // créer identifiant unique du lien 
 $alphabetsmall = 'abcdefghijklmnopqrstuvwxyz';
