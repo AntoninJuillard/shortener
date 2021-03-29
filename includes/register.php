@@ -53,7 +53,7 @@ if(isset($_POST['submit']))
 
     // check si il y a des résultats à la requête (= si les identifiants sont dans la base de données)
     if ($result->num_rows > 0) {
-        include 'inscription.php';
+        //include 'registration.php';
     } else {
         session_start();
         $_SESSION['email'] = $email;

@@ -61,7 +61,7 @@ if(isset($_POST['submitlink']))
     // faire la requete 
     $conn->query($sql);
 
-    // enregister les liens dans la table
+    // enregister les liens dans la table avec l'email de la session
     session_start();
     $sessionemail = $_SESSION['email'];
     // source pour aider insertion : https://forums.commentcamarche.net/forum/affich-1602964-variable-php-dans-requete-mysql
@@ -161,7 +161,7 @@ if(isset($_GET['change']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
-    <link rel="stylesheet" href="connexion.css">
+    <link rel="stylesheet" href="css/connection.css">
 </head>
 <body>
     <div class="home_container">
@@ -195,7 +195,7 @@ if(isset($_GET['change']))
                             <?php echo '<div class="icon"></div>'; ?>
                             <?php echo '<div class="number"> views ='; ?>
                                 <?php print_r($rows[5]); ?>
-                            <?php echo '</div>;' ?>
+                            <?php echo '</div>' ?>
                         <?php echo '</div>'; ?>
                     <?php echo '</div>'; ?>
                 <?php } ?>

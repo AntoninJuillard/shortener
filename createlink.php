@@ -120,7 +120,7 @@ if(isset($_GET['change']))
             }
         };
     } else {
-        echo "0 results";
+        //echo "0 results";
     };
 };
 
@@ -132,7 +132,7 @@ if(isset($_GET['change']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
-    <link rel="stylesheet" href="connexion.css">
+    <link rel="stylesheet" href="css/connection.css">
 </head>
 <body>
     <div class="home_container">
