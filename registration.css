@@ -14,7 +14,8 @@
 .home_container_registration h1{
     font-family: 'Nunito', sans-serif;
     font-size: 40px;
-    color: #ffffff;
+    text-transform: uppercase;
+    color: #f8b500;
 }
 
 .home_container_registration .home_form{
@@ -48,7 +49,7 @@
     font-size: 20px;
     font-weight: 270;
     color: #26001b;
-    background: #ffe5b9;
+    background: #F3CCCC;
 }
 
 .home_container_registration .input::placeholder{
