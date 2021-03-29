@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
-    <link rel="stylesheet" href="connection.css">
+    <link rel="stylesheet" href="registration.css">
 </head>
 <body>
-    <div class="home_container">
+    <div class="home_container_registration">
+        <h1>Registration</h1>
         <form method="POST" class="home_form" action="registration.php">
-            <input type="email" name="email" id="email" placeholder="email">
-            <input type="password" name="password" id="password" placeholder="password">
-            <input type="password" name="password" id="password" placeholder="password">
-            <input type="submit" value="S'inscrire" name="submit" class="home_form_submit-button home_form_submit-register-button"/>
+            <input type="email" name="email" id="email" class="input" placeholder="email">
+            <input type="password" name="password" id="password" class="input" placeholder="password">
+            <input type="password" name="password" id="password" class="input" placeholder="confirm password">
+            <input type="submit" value="Register" name="submit" class="register_button"/>
         </form>
     </div>
 </body>

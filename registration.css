@@ -1,0 +1,47 @@
+.home_container_registration{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #3915a1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_container_registration .home_form{
+    display: flex;
+    padding: 30px;
+    border-radius: 12px;
+    background: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_container_registration .input{
+    width: 340px;
+    height: 50px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 270;
+    color: #bbbbbb;
+}
+
+.home_container_registration .register_button{
+    width: 340px;
+    height: 50px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 270;
+    color: #26001b;
+}
+
+.home_container_registration .input::placeholder{
+    color: #dddddd;
+}
