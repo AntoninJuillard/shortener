@@ -18,7 +18,8 @@
             <input type="password" name="password" id="password" class="input" placeholder="password">
             <input type="password" name="password" id="password" class="input" placeholder="confirm password">
             <input type="submit" value="Register" name="submit" class="register_button"/>
-            <button class="home_new-account-button"><a href="connection.php">LOGIN</a></button>
+            <div class="separation"></div>
+            <button class="login_submit_button"><a href="connection.php">Login</a></button>
         </form>
     </div>
 </body>

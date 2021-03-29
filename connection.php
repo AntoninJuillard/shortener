@@ -19,7 +19,7 @@
             <input type="password" name="password" id="password" class="input" placeholder="password">
             <div class="buttons">
                 <button class="new_account_button"><a href="registration.php">Register</a></button>
-                <input type="submit" value="Login" name="submit" class="submit_button"/>
+                <input type="submit" value="Login" name="submit" class="login_submit_button"/>
             </div>
         </form>
     </div>
