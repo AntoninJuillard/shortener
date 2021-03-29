@@ -1,7 +1,6 @@
 <?php
     session_unset();
     session_destroy();
-    include 'includes/connect.php'
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
 </head>
 <body>
     <div class="home_container">
-        <form method="POST" action="connection.php" class="home_form">
+        <form method="POST" action="connect.php" class="home_form">
             <p>Connecte toi Raphael!</p>
             <input type="email" name="email" id="email" placeholder="email">
             <input type="password" name="password" id="password" placeholder="mot de passe">

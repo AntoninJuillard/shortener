@@ -39,7 +39,7 @@ if(isset($_POST['submit']))
         $_SESSION['email'] = $email;
         include 'createlink.php'; 
     } else { 
-        include 'includes/connection.php'; 
+        include 'connection.php'; 
     }; 
 
 }
