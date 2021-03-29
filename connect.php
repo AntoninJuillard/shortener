@@ -1,8 +1,9 @@
 <?php
 
+// check if the form has been sent 
 if(isset($_POST['submit']))
 {
-    // recuperer les données du form
+    // retrieve data from the form
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -11,28 +12,28 @@ if(isset($_POST['submit']))
     $username = 'root';
     $userpassword = 'root';
 
-    // source aide pour gérer la base de donnée : https://www.w3schools.com/php/php_mysql_intro.asp
-    // acceder au serveur depuis Php
+    // source help to manage the database: https://www.w3schools.com/php/php_mysql_intro.asp
+    // access the server from Php
     $connect = new mysqli($servername, $username, $userpassword);
 
-    // se connecter à la base de données
+    // connect to the database
     $conn = new mysqli($servername, $username, $userpassword, 'logindb');
 
-    // Check la connexion / source aide : https://www.w3schools.com/php/php_mysql_insert.asp
-    // requête
+    // Check the connection / source help: https://www.w3schools.com/php/php_mysql_insert.asp
+    // request
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // selectionner les lignes de la table ou l'email et le password entrer apparaissent
-    // source aide : https://www.w3schools.com/sql/sql_select.asp
+    // select the rows of the table where the email and the password appear
+    // help source: https://www.w3schools.com/sql/sql_select.asp
 
     $sql = "SELECT * FROM users WHERE email='$email' AND pass='$password'";
-    // source aide : https://stackoverflow.com/questions/42050614/mysqli-queryconn-sql-or-conn-querysql
-    // resultat la requête = 
+    // source help : https://stackoverflow.com/questions/42050614/mysqli-queryconn-sql-or-conn-querysql
+    // result of the query = 
     $result = $conn->query($sql);
 
-    // check si il y a des résultats à la requête (= si les identifiants sont dans la base de données)
+    // check if there are results to the query (= if the identifiers are in the database)
 
     if ($result->num_rows > 0) { 
         session_start(); 

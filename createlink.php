@@ -7,33 +7,33 @@ $userpassword = 'root';
 
 
 
-// source aide pour gérer la base de donnée : https://www.w3schools.com/php/php_mysql_intro.asp
-// acceder au serveur depuis Php
+// source help to manage the database: https://www.w3schools.com/php/php_mysql_intro.asp
+// access the server from Php
 $connect = new mysqli($servername, $username, $userpassword);
 
-// source pour le "IF NOT EXISTS" : https://forums.mysql.com/read.php?101,213455,213496
+// source for the "IF NOT EXISTS" : https://forums.mysql.com/read.php?101,213455,213496
 
-// créer une nouvelle base de données si elle n'est pas déjà créé 
+// create a new database if it is not already created 
 $sql = "CREATE DATABASE IF NOT EXISTS urldb";
 
-// check si il n'y a pas d'erreur & envoyer la requete
+// check if there are no errors & send the request
 if ($connect->query($sql) === TRUE) {
-    //echo "Database created successfully";
+    
 } else {
     echo "Error: " . $connect->error;
 };
 
-// se connecter à la base de données
+// connect to the database
 $conn = new mysqli($servername, $username, $userpassword, 'urldb');
 
-// Check la connexion / source : https://www.w3schools.com/php/php_mysql_insert.asp & https://www.w3schools.com/Php/func_mysqli_connect_error.asp
+// Check the connection / source : https://www.w3schools.com/php/php_mysql_insert.asp & https://www.w3schools.com/Php/func_mysqli_connect_error.asp
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
-    //echo 'connected';
+    
 };
 
-// créer une table dans la base de donnée si elle n'est pas déjà créé
+// create a table in the database if it is not already created
 $sql = "CREATE TABLE IF NOT EXISTS urlsystem (
 id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 urlbase VARCHAR(100) NOT NULL,
@@ -42,7 +42,7 @@ activated VARCHAR(100) NOT NULL,
 email VARCHAR(100) NOT NULL,
 views INT
 )";
-// faire la requete 
+// make the request 
 $conn->query($sql);
 
 session_start();
@@ -53,34 +53,33 @@ $sessionresult = $conn->query($sql);
     
 // help to loop on the result of the request https://phppot.com/mysql/mysql-fetch-using-php/ 
 
-
-// code pour changer la valeur d'activation / desactivation des liens 
+// code to change the activation / deactivation value of the links 
 if(isset($_GET['change']))
 {
     $servername = 'localhost';
     $username = 'root';
     $userpassword = 'root';
 
-    // source aide pour gérer la base de donnée : https://www.w3schools.com/php/php_mysql_intro.asp
-    // acceder au serveur depuis Php
+    // source help to manage the database: https://www.w3schools.com/php/php_mysql_intro.asp
+    // access the server from Php
     $connect = new mysqli($servername, $username, $userpassword);
 
-    // source pour le "IF NOT EXISTS" : https://forums.mysql.com/read.php?101,213455,213496
+    // source for the "IF NOT EXISTS" : https://forums.mysql.com/read.php?101,213455,213496
 
-    // créer une nouvelle base de données si elle n'est pas déjà créé 
+    // create a new database if it is not already created 
     $sql = "CREATE DATABASE IF NOT EXISTS urldb";
 
-    // check si il n'y a pas d'erreur & envoyer la requete
+    // check if there are no errors & send the request
     if ($connect->query($sql) === TRUE) {
         //echo "Database created successfully";
     } else {
         echo "Error: " . $connect->error;
     };
 
-    // se connecter à la base de données
+    // connect to the database
     $conn = new mysqli($servername, $username, $userpassword, 'urldb');
 
-    // Check la connexion / source : https://www.w3schools.com/php/php_mysql_insert.asp & https://www.w3schools.com/Php/func_mysqli_connect_error.asp
+    // Check the connexion / source : https://www.w3schools.com/php/php_mysql_insert.asp & https://www.w3schools.com/Php/func_mysqli_connect_error.asp
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } else {
@@ -89,9 +88,9 @@ if(isset($_GET['change']))
 
 
 
-    // recuperer l'id du lien cliqué (dans l'url)
+    // get the id of the clicked link (in the url)
     $idchange = $_GET['change'];
-    // selectionner le lien dans la base de donnée 
+    // select the link in the database 
     $sql = "SELECT * FROM urlsystem WHERE id='$idchange'";
     $idresult = $conn->query($sql);
     // help to loop on the result of the request https://phppot.com/mysql/mysql-fetch-using-php/ 
@@ -99,8 +98,8 @@ if(isset($_GET['change']))
         // output data of each row
         if($rowsid = mysqli_fetch_row($idresult))
         {
-            // si la colonne activated du rang du lien dans la base de donnée vaut true 
-            // elle vaut maintenant false (UPDATE) et inversement
+            // if the activated column of the link row in the database is true 
+            // it is now false (UPDATE) and vice versa
             if($rowsid[3] == 'true')
             {
                 // source UPDATE : https://www.w3schools.com/php/php_mysql_update.asp
