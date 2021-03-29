@@ -40,14 +40,22 @@
     font-weight: 270;
 }
 
+.home_container_connection .home_form .buttons{
+    display: flex;
+    width: 348px;
+    height: 50px;
+    justify-content: space-between;
+    
+}
+
 .home_container_connection .home_form .buttons .new_account_button a{
     text-decoration: none;
     color: #000000;
 }
 
 .home_container_connection .home_form .buttons .new_account_button{
-    width: 200px;
-    height: 40px;
+    width: 130px;
+    height: 45px;
     padding: 1px 2px;
     border-radius: 7px;
     font-family: 'Nunito', sans-serif;
@@ -60,7 +68,7 @@
 
 .home_container_connection .home_form .buttons .submit_button{
     width: 200px;
-    height: 40px;
+    height: 45px;
     padding: 1px 2px;
     border-radius: 7px;
     font-family: 'Nunito', sans-serif;
