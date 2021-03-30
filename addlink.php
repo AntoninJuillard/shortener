@@ -168,7 +168,7 @@ if(isset($_GET['change']))
                     <?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>
                 </a>
             </div>
-            <div class="newlink-button home_form_submit-button">NOUVEAU LIEN</div>
+            <a class="newlink-button home_form_submit-button" href="createlink.php">NOUVEAU LIEN</a>
         </div>
     </div>
     <div class="account_zone">

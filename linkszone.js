@@ -3,7 +3,7 @@ const accountContainer = accountZone.querySelector('.account_container')
 const homeContainer = document.querySelector('.home_container_createlink')
 const accountButton = homeContainer.querySelector('.account-button')
 const homeForm = homeContainer.querySelector('.home_form')
-const newLinkButton = homeContainer.querySelector('.newlink-button')
+
 
 // Si le bouton est en mode ouvrir la partie mon compte
 // ou en mode se déconnecter 
@@ -25,9 +25,4 @@ accountButton.addEventListener('click',() =>
         accountButtonChange = true
         console.log(accountButtonChange);
     }
-})
-
-newLinkButton.addEventListener('click', () => 
-{
-    window.location.href="createlink.php" 
 })
