@@ -175,6 +175,7 @@ if(isset($_GET['change']))
     </div>
     <div class="account_zone">
         <div class="account_container">
+        <div class="account_container_close-button"></div>
             <div class="account_link-title">My URLs</div>
             <div class="account_link-container">
                 <?php while($rows = mysqli_fetch_row($sessionresult)) { ?>

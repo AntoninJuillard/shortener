@@ -262,3 +262,16 @@ body{
         transform: translateX(33.351vw);
     }
 }
+
+.home_form_mooveback{
+    animation-name: mooveback;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes mooveback{
+    100%{
+        transform: translateX(0);
+    }
+}

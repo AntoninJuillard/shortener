@@ -21,6 +21,7 @@ accountButton.addEventListener('click',() =>
     } else {
         accountContainer.classList.add('account_container_reveal')
         accountContainer.classList.remove('account_container_close')
+        homeForm.classList.remove('home_form_mooveback')
         homeForm.classList.add('home_form_moove')
         accountButton.textContent = "log out"
         accountButtonChange = true
@@ -33,5 +34,7 @@ closeContainerButton.addEventListener('click', () =>
     accountContainer.classList.remove('account_container_reveal')
     accountContainer.classList.add('account_container_close')
     accountButton.textContent = 'MY ACCOUNT'
+    homeForm.classList.remove('home_form_moove')
+    homeForm.classList.add('home_form_mooveback')
     accountButtonChange = false
 })
