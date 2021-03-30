@@ -106,16 +106,14 @@ if(isset($_GET['change']))
                 // source UPDATE : https://www.w3schools.com/php/php_mysql_update.asp
                 $sql = "UPDATE urlsystem SET activated='false' WHERE id='$idchange'";
                 if ($conn->query($sql) === TRUE) {
-                    print $idchange;
-                    print "deactivated";
+                    
                 } else {
                     echo "Error updating record: " . $conn->error;
                 }
             } else if($rowsid[3] == 'true'){
                 $sql = "UPDATE urlsystem SET activated='true' WHERE id='$idchange'";
                 if ($conn->query($sql) === TRUE) {
-                    print $idchange;
-                    print "activated";
+
                 } else {
                     echo "Error updating record: " . $conn->error;
                 }
@@ -124,6 +122,12 @@ if(isset($_GET['change']))
     } else {
         //echo "0 results";
     };
+
+    session_start();
+    $sessionemail = $_SESSION['email'];
+
+    $sql = "SELECT * FROM urlsystem WHERE email='$sessionemail' ";
+    $sessionresult = $conn->query($sql);
 };
 
 
@@ -150,27 +154,27 @@ if(isset($_GET['change']))
             <div class="account_link-title">Mes liens</div>
             <div class="account_link-container">
                 <?php while($rows = mysqli_fetch_row($sessionresult)) { ?>
-                        <?php echo '<div class="account_link-element">'; ?>
-                            <?php echo '<div class="account_link-element_title">'; ?>
-                                <?php print_r($rows[1]); ?>
-                            <?php echo '</div>'; ?>
-                            <!-- changer l'affichage du bouton en fonction de l'activation ou non du lien -->
-                            <?php if($rows[3]==='true') { ?>
-                                <?php echo '<div class="account_link-element_state"></div>'; ?>
-                                <?php echo '<a href=createlink.php?change='.$rows[0].'>desactiver</a>'; ?>
-                            <?php } else { ?>
-                                <?php echo '<div class="account_link-element_stateoff"></div>'; ?>
-                                <?php echo '<a href=createlink.php?change='.$rows[0].'>activer</a>'; ?>
-                            <?php }; ?>
-                            
-                            <?php echo '<div class="account_link-element_views">'; ?>
-                                <?php echo '<div class="icon"></div>'; ?>
-                                <?php echo '<div class="number"> views ='; ?>
-                                    <?php print_r($rows[5]); ?>
-                                <?php echo '</div>'; ?>
-                            <?php echo '</div>'; ?>
+                    <?php echo '<div class="account_link-element">'; ?>
+                        <?php echo '<div class="account_link-element_title">'; ?>
+                            <?php print_r($rows[1]); ?>
                         <?php echo '</div>'; ?>
-                    <?php } ?>
+                        <!-- change the display of the button depending on whether the link is enabled or not -->
+                        <?php if($rows[3]==='true') { ?>
+                            <?php echo '<div class="account_link-element_state"></div>'; ?>
+                            <?php echo '<a href=addlink.php?change='.$rows[0].'>desactiver</a>'; ?>
+                        <?php } else { ?>
+                            <?php echo '<div class="account_link-element_stateoff"></div>'; ?>
+                            <?php echo '<a href=addlink.php?change='.$rows[0].'>activer</a>'; ?>
+                        <?php }; ?>
+                            
+                        <?php echo '<div class="account_link-element_views">'; ?>
+                            <?php echo '<div class="icon"></div>'; ?>
+                            <?php echo '<div class="number"> views ='; ?>
+                                <?php print_r($rows[5]); ?>
+                            <?php echo '</div>' ?>
+                        <?php echo '</div>'; ?>
+                    <?php echo '</div>'; ?>
+                <?php } ?>
             </div>
         </div>
     </div>
