@@ -222,9 +222,9 @@ body{
     justify-content: space-around;
 }
 
-.state_button{
+.state_button_desactivate, .state_button_activate{
     display: flex;
-    width: 81px;
+    width: 5.625vw;
     justify-content: center;
 }
 
