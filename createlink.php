@@ -142,16 +142,16 @@ if(isset($_GET['change']))
 </head>
 <body>
     <div class="home_container_createlink">
-        <div class="account-button">mon compte</div>
+        <div class="account-button">MY ACCOUNT</div>
         <form method="POST" action="addlink.php" class="home_form">
-            <h1 class="form_label">Rentrez votre lien</h1>
+            <h1 class="form_label">Put your url here</h1>
             <input type="text" name="lien" id="lien" class="input" placeholder="put link here" required>
             <input type="submit" name="submitlink" value="GO" class="home_form_submit-button home_form_submit-register-button"/>
         </form>
     </div>
     <div class="account_zone">
         <div class="account_container">
-            <div class="account_link-title">Mes liens</div>
+            <div class="account_link-title">My URLs</div>
             <div class="account_link-container">
                 <?php while($rows = mysqli_fetch_row($sessionresult)) { ?>
                     <?php echo '<div class="account_link-element">'; ?>

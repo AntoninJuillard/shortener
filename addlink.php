@@ -161,20 +161,20 @@ if(isset($_GET['change']))
 </head>
 <body>
     <div class="home_container_createlink">
-        <div class="account-button">mon compte</div>
+        <div class="account-button">MY ACCOUNT</div>
         <div class="home_buttons home_form" >
-        <h1 class="form_label">Voici votre lien</h1>
+        <h1 class="form_label">here is your short url</h1>
             <div class="copylink-button">
                 <a href="<?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>" target="_blank" rel="noopener noreferrer">
                     <?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>
                 </a>
             </div>
-            <a class="newlink-button home_form_submit-button" href="createlink.php">NOUVEAU LIEN</a>
+            <a class="newlink-button home_form_submit-button" href="createlink.php">NEW URL</a>
         </div>
     </div>
     <div class="account_zone">
         <div class="account_container">
-            <div class="account_link-title">Mes liens</div>
+            <div class="account_link-title">My URLs</div>
             <div class="account_link-container">
                 <?php while($rows = mysqli_fetch_row($sessionresult)) { ?>
                     <?php echo '<div class="account_link-element">'; ?>
@@ -184,10 +184,10 @@ if(isset($_GET['change']))
                         <!-- change the display of the button depending on whether the link is enabled or not -->
                         <?php if($rows[3]==='true') { ?>
                             <?php echo '<div class="account_link-element_state"></div>'; ?>
-                            <?php echo '<a href=addlink.php?change='.$rows[0].'>desactiver</a>'; ?>
+                            <?php echo '<a href=addlink.php?change='.$rows[0].'>deactivate</a>'; ?>
                         <?php } else { ?>
                             <?php echo '<div class="account_link-element_stateoff"></div>'; ?>
-                            <?php echo '<a href=addlink.php?change='.$rows[0].'>activer</a>'; ?>
+                            <?php echo '<a href=addlink.php?change='.$rows[0].'>activate</a>'; ?>
                         <?php }; ?>
                         
                         <?php echo '<div class="account_link-element_views">'; ?>
