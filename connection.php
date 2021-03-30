@@ -16,10 +16,10 @@
         <h1>Connection</h1>
         <form method="POST" action="connect.php" class="home_form">
             <input type="email" name="email" id="email" class="input" placeholder="email">
-            <input type="password" name="password" id="password" class="input" placeholder="mot de passe">
+            <input type="password" name="password" id="password" class="input" placeholder="password">
             <div class="buttons">
                 <button class="new_account_button"><a href="registration.php">Register</a></button>
-                <input type="submit" value="Login" name="submit" class="submit_button"/>
+                <input type="submit" value="Login" name="submit" class="login_submit_button"/>
             </div>
         </form>
     </div>

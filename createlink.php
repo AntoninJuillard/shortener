@@ -140,8 +140,8 @@ if(isset($_GET['change']))
     <div class="home_container">
         <div class="account-button">mon compte</div>
         <form method="POST" action="addlink.php" class="home_form">
-            <label for="lien" class="form_label">Rentrez votre lien</label>
-            <input type="text" name="lien" id="lien" placeholder="mettre lien ici">
+            <h1 class="form_label">Rentrez votre lien</h1>
+            <input type="text" name="lien" id="lien" class="input" placeholder="put link here">
             <input type="submit" name="submitlink" value="GO" class="home_form_submit-button home_form_submit-register-button"/>
         </form>
     </div>

@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 7px 7px 14px #9ba4b450;
 }
 
 .home_container_connection .home_form .input{
@@ -40,14 +41,22 @@
     font-weight: 270;
 }
 
+.home_container_connection .home_form .buttons{
+    display: flex;
+    width: 348px;
+    height: 50px;
+    justify-content: space-between;
+    
+}
+
 .home_container_connection .home_form .buttons .new_account_button a{
     text-decoration: none;
     color: #000000;
 }
 
 .home_container_connection .home_form .buttons .new_account_button{
-    width: 200px;
-    height: 40px;
+    width: 130px;
+    height: 45px;
     padding: 1px 2px;
     border-radius: 7px;
     font-family: 'Nunito', sans-serif;
@@ -58,9 +67,9 @@
     background: #F3CCCC;
 }
 
-.home_container_connection .home_form .buttons .submit_button{
+.home_container_connection .home_form .buttons .login_submit_button{
     width: 200px;
-    height: 40px;
+    height: 45px;
     padding: 1px 2px;
     border-radius: 7px;
     font-family: 'Nunito', sans-serif;

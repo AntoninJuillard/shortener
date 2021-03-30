@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(240deg,#fff9b0,#ede682);
+    background: linear-gradient(240deg,#fff9b0,#fed049);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 7px 7px 14px #9ba4b450;
 }
 
 .home_container_registration .input{
@@ -33,6 +34,7 @@
     height: 50px;
     margin-bottom: 40px;
     border-radius: 7px;
+    border: 2px solid #e6e6e6;
     font-family: 'Nunito', sans-serif;
     text-align: center;
     font-size: 20px;
@@ -42,6 +44,7 @@
 .home_container_registration .register_button{
     width: 349px;
     height: 56px;
+    margin-bottom: 20px;
     padding: 1px 2px;
     border-radius: 7px;
     font-family: 'Nunito', sans-serif;
@@ -54,4 +57,29 @@
 
 .home_container_registration .input::placeholder{
     color: #dddddd;
+}
+
+.home_container_registration .separation{
+    width: 340px;
+    height: 5px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.home_container_registration .login_submit_button{
+    width: 200px;
+    height: 54px;
+    padding: 1px 2px;
+    border-radius: 7px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 270;
+    color: #26001b;
+    background: #bedbbb;
+}
+
+.home_container_registration .login_submit_button a{
+    text-decoration: none;
+    color: #000000;
 }

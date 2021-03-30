@@ -1,105 +1,57 @@
 body{
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
-.home_container{
+.home_container_createlink{
+    display: flex;
+    top:0;
+    left:0;
     width: 100vw;
     height: 100vh;
-    background: #FFFFFF;
+    background: linear-gradient(240deg,#fff9b0,#fed049);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_container_createlink .home_form{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.home_container .home_form{
-    width: 28.672vw;
-    height: 31.638vw;
-    background: #C4C4C4;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.home_container_createlink h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #f8b500;
 }
 
-.home_form_moove{
-    animation-name: moove;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes moove{
-    100%{
-        transform: translateX(-19.028vw);
-    }
-}
-
-.home_container .home_form p{
-    width: 20.904vw;
-    height: 3.390vw;
-    font-size: 1.806vw;
-    background: #D6D6D6;
-    margin-top: 4.444vw;
-    text-align: center;
-    line-height: 3.390vw;
-    margin-bottom: 0;
-}
-
-.home_container .home_form input{
-    width: 20.904vw;
-    height: 3.390vw;
-    font-size: 1.806vw;
-    background: #F6F5F5;
-    color: #C4C4C4;
-    margin-top: 42px;
-    text-align: center;
-    line-height: 3.390vw;
-    border: 0px solid #F6F5F5;
-}
-
-.home_container .home_form .home_form_submit-button{
-    width: 9.494vw;
-    height: 3.841vw;
-    font-size: 1.111vw;
-    background: #F3CCCC;
-    box-shadow: 0 4px 8px 0 #00000040;
-    border-radius: 1.042vw;
-    text-transform: capitalize;
-    color: #000000;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.home_container .home_new-account-button{
-    width: 6.922vw;
-    height: 3.841vw;
-    font-size: 0.903vw;
-    background: #F3CCCC;
-    box-shadow: 0 4px 8px 0 #00000040;
-    border-radius: 1.042vw;
-    text-transform: capitalize;
-    cursor: pointer;
-    font-weight: 700;
-    border: 0px solid #F6F5F5;
-    margin-right: 2.917vw;
-    position: relative;
-    top: -0.556vw;
-}
-
-.home_container .home_new-account-button a{
-    text-decoration: none;
-    color: #000000;
-}
-
-.home_container .home_form .home_form_submit-register-button{
-    width: 20.903vw;
-}
-
-.form_label{
+.home_container_createlink .input{
+    width: 960px;
+    height: 50px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    border: 2px solid #e6e6e6;
     font-family: 'Nunito', sans-serif;
-    margin-top: 7.292vw;
-    font-size: 1.7vw;
-    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 270;
+}
+
+.home_container_createlink .home_form_submit-button{
+    width: 220px;
+    height: 56px;
+    margin-bottom: 20px;
+    padding: 1px 2px;
+    border-radius: 7px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 270;
+    color: #26001b;
+    background: #F3CCCC;
 }
 
 .account-button{
@@ -130,10 +82,6 @@ body{
     margin-top: 6.875vw;
     box-shadow: 0 4px 8px 0 #00000040;
     border-radius: 1.042vw; 
-}
-
-.copylink-button a{
-    color: #f8b500;
 }
 
 .newlink-button{
