@@ -19,7 +19,8 @@
             <input type="password" name="password" id="password" class="input" placeholder="confirm password">
             <input type="submit" value="Register" name="submit" class="register_button"/>
             <div class="separation"></div>
-            <button class="login_submit_button"><a href="connection.php">Login</a></button>
+
+            <a href="connection.php" class="login_submit_button">Login</a>
         </form>
     </div>
 </body>

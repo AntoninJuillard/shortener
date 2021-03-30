@@ -56,6 +56,7 @@ body{
     font-weight: 270;
     color: #26001b;
     background: #F3CCCC;
+    cursor: pointer;
 }
 
 .account-button{

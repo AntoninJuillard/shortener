@@ -18,7 +18,7 @@
             <input type="email" name="email" id="email" class="input" placeholder="email">
             <input type="password" name="password" id="password" class="input" placeholder="password">
             <div class="buttons">
-                <button class="new_account_button"><a href="registration.php">Register</a></button>
+                <a class="new_account_button" href="registration.php">Register</a>
                 <input type="submit" value="Login" name="submit" class="login_submit_button"/>
             </div>
         </form>

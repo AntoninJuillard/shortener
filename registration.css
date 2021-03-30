@@ -53,6 +53,7 @@
     font-weight: 270;
     color: #26001b;
     background: #F3CCCC;
+    cursor: pointer;
 }
 
 .home_container_registration .input::placeholder{
@@ -69,6 +70,7 @@
 .home_container_registration .login_submit_button{
     width: 200px;
     height: 54px;
+    line-height: 50px;
     padding: 1px 2px;
     border-radius: 7px;
     font-family: 'Nunito', sans-serif;
@@ -77,6 +79,11 @@
     font-weight: 270;
     color: #26001b;
     background: #bedbbb;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 .home_container_registration .login_submit_button a{
