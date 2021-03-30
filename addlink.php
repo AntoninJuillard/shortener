@@ -141,6 +141,12 @@ if(isset($_GET['change']))
     } else {
         echo "0 results";
     };
+
+    session_start();
+    $sessionemail = $_SESSION['email'];
+
+    $sql = "SELECT * FROM urlsystem WHERE email='$sessionemail' ";
+    $sessionresult = $conn->query($sql);
 };
 
 
@@ -158,7 +164,9 @@ if(isset($_GET['change']))
         <div class="account-button">mon compte</div>
         <div class="home_buttons home_form" >
             <div class="copylink-button">
-                <?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>
+                <a href="<?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>" target="_blank" rel="noopener noreferrer">
+                    <?php echo "http://localhost:8888/shortener/v.php?key=".$urlshort ?>
+                </a>
             </div>
             <div class="newlink-button home_form_submit-button">NOUVEAU LIEN</div>
         </div>

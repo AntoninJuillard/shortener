@@ -131,6 +131,10 @@ body{
     border-radius: 1.042vw; 
 }
 
+.copylink-button a{
+    color: #f8b500;
+}
+
 .newlink-button{
     margin-top: 4.097vw;
     line-height: auto;

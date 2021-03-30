@@ -90,6 +90,7 @@ if(isset($_GET['change']))
 
     // get the id of the clicked link (in the url)
     $idchange = $_GET['change'];
+    
     // select the link in the database 
     $sql = "SELECT * FROM urlsystem WHERE id='$idchange'";
     $idresult = $conn->query($sql);
@@ -105,14 +106,16 @@ if(isset($_GET['change']))
                 // source UPDATE : https://www.w3schools.com/php/php_mysql_update.asp
                 $sql = "UPDATE urlsystem SET activated='false' WHERE id='$idchange'";
                 if ($conn->query($sql) === TRUE) {
-                    //echo "Record updated successfully";
+                    print $idchange;
+                    print "deactivated";
                 } else {
                     echo "Error updating record: " . $conn->error;
                 }
             } else if($rowsid[3] == 'true'){
                 $sql = "UPDATE urlsystem SET activated='true' WHERE id='$idchange'";
                 if ($conn->query($sql) === TRUE) {
-                    //echo "Record updated successfully";
+                    print $idchange;
+                    print "activated";
                 } else {
                     echo "Error updating record: " . $conn->error;
                 }
