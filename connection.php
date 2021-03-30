@@ -10,6 +10,7 @@
     <title>shortener</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="connexion.css">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
 </head>
 <body>
     <div class="home_container_connection">
