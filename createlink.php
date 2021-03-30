@@ -36,7 +36,7 @@ if ($conn->connect_error) {
 // create a table in the database if it is not already created
 $sql = "CREATE TABLE IF NOT EXISTS urlsystem (
 id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-urlbase VARCHAR(100) NOT NULL,
+urlbase VARCHAR(300) NOT NULL,
 urlshort VARCHAR(100) NOT NULL,
 activated VARCHAR(100) NOT NULL,
 email VARCHAR(100) NOT NULL,
