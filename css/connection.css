@@ -96,6 +96,7 @@ body{
 }
 
 .form_label{
+    font-family: 'Nunito', sans-serif;
     margin-top: 7.292vw;
     font-size: 1.7vw;
     font-weight: 700;
