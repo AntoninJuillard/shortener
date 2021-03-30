@@ -21,7 +21,7 @@ accountButton.addEventListener('click',() =>
     } else {
         accountContainer.classList.add('account_container_reveal')
         homeForm.classList.add('home_form_moove')
-        accountButton.textContent = "deconnexion"
+        accountButton.textContent = "log out"
         accountButtonChange = true
         console.log(accountButtonChange);
     }

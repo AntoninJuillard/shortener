@@ -60,14 +60,15 @@ body{
 }
 
 .account-button{
-    width: 8.059vw;
-    height: 8.059vw;
+    width: 9.059vw;
+    height: 4.059vw;
     position: absolute;
     top: 1.389vw;
     right: 1.389vw;
     text-align: center;
-    line-height: 8.059vw;
-    background: #C4C4C4;
+    line-height: 4.059vw;
+    background: #79D9BD;
+    color: #181D20;
     box-shadow: 0 4px 8px 0 #00000040;
     text-transform: capitalize;
     cursor: pointer;
