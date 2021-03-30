@@ -134,10 +134,10 @@ if(isset($_GET['change']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
-    <link rel="stylesheet" href="css/connection.css">
+    <link rel="stylesheet" href="createlink.css">
 </head>
 <body>
-    <div class="home_container">
+    <div class="home_container_createlink">
         <div class="account-button">mon compte</div>
         <form method="POST" action="addlink.php" class="home_form">
             <h1 class="form_label">Rentrez votre lien</h1>

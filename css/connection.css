@@ -30,7 +30,7 @@ body{
 
 @keyframes moove{
     100%{
-        transform: translateX(-19.028vw);
+        transform: translateX(-20.028vw);
     }
 }
 

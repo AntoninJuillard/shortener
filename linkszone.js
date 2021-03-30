@@ -1,6 +1,6 @@
 const accountZone = document.querySelector('.account_zone')
 const accountContainer = accountZone.querySelector('.account_container')
-const homeContainer = document.querySelector('.home_container')
+const homeContainer = document.querySelector('.home_container_createlink')
 const accountButton = homeContainer.querySelector('.account-button')
 const homeForm = homeContainer.querySelector('.home_form')
 const newLinkButton = homeContainer.querySelector('.newlink-button')

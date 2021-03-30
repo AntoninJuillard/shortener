@@ -5,8 +5,6 @@ body{
 
 .home_container_createlink{
     display: flex;
-    top:0;
-    left:0;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(240deg,#fff9b0,#fed049);
@@ -21,6 +19,8 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
 
 .home_container_createlink h1{
     font-size: 40px;
@@ -38,6 +38,10 @@ body{
     text-align: center;
     font-size: 20px;
     font-weight: 270;
+}
+
+.home_container_createlink .input::placeholder{
+    color: #dddddd;
 }
 
 .home_container_createlink .home_form_submit-button{
@@ -123,6 +127,23 @@ body{
 @keyframes reveal{
     100%{
         transform: translateX(0);
+    }
+}
+
+.home_form_moove{
+    animation-name: moove;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.home_form_moove .input{
+    width: 700px;
+}
+
+@keyframes moove{
+    100%{
+        transform: translateX(-18.028vw);
     }
 }
 
