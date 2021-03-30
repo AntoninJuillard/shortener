@@ -170,8 +170,8 @@ if(isset($_GET['change']))
                         <?php }; ?>
                             
                         <?php echo '<div class="account_link-element_views">'; ?>
-                            <?php echo '<div class="icon"></div>'; ?>
-                            <?php echo '<div class="number"> views ='; ?>
+                            <?php echo file_get_contents("eye.svg");?>
+                            <?php echo '<div class="number">'; ?>
                                 <?php print_r($rows[5]); ?>
                             <?php echo '</div>' ?>
                         <?php echo '</div>'; ?>
