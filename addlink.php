@@ -185,7 +185,7 @@ if(isset($_GET['change']))
                         <!-- change the display of the button depending on whether the link is enabled or not -->
                         <?php if($rows[3]==='true') { ?>
                             <?php echo '<div class="account_link-element_state"></div>'; ?>
-                            <?php echo '<a href=addlink.php?change='.$rows[0].'>deactivate</a>'; ?>
+                            <?php echo '<a href=addlink.php?change='.$rows[0].'>desactivate</a>'; ?>
                         <?php } else { ?>
                             <?php echo '<div class="account_link-element_stateoff"></div>'; ?>
                             <?php echo '<a href=addlink.php?change='.$rows[0].'>activate</a>'; ?>
