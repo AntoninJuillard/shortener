@@ -84,7 +84,7 @@ body{
     line-height: 9.435vw;
     cursor: pointer;
     background: #E8E1E1;
-    margin-top: 6.875vw;
+    
     box-shadow: 0 4px 8px 0 #00000040;
     border-radius: 1.042vw; 
 }
@@ -94,6 +94,11 @@ body{
     line-height: auto;
     text-align: center;
     line-height: 3.841vw;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 .account_zone{
