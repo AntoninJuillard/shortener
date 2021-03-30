@@ -166,14 +166,13 @@ body{
 .account_link-container{
     height: 90vh;
     width: 33.333vw;
-    background: #C4C4C4;
     margin-top: 0.625vw;
     overflow: scroll;
 }
 
 .account_link-element{
     display: flex;
-    width: 33.880vw;
+    width: 32vw;
     height: 3.260vw;
     background: #A98080;
     margin-top: 0.764vw;
@@ -182,8 +181,9 @@ body{
 }
 
 .account_link-element_title{
-    width: 240px;
+    width: 16.66vw;
     margin-left: 1.042vw;
+    overflow: scroll;
 }
 
 .account_link-element_state{
@@ -222,11 +222,12 @@ body{
     justify-content: space-around;
 }
 
-.account_link-container .state_button{
+.state_button{
     display: flex;
     width: 81px;
     justify-content: center;
 }
+
 .short-url-container{
     width: 20.904vw;
     height: 3.390vw;
