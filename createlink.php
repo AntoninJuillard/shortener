@@ -139,6 +139,7 @@ if(isset($_GET['change']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
     <link rel="stylesheet" href="createlink.css">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
 </head>
 <body>
     <div class="home_container_createlink">
@@ -161,10 +162,10 @@ if(isset($_GET['change']))
                         <!-- change the display of the button depending on whether the link is enabled or not -->
                         <?php if($rows[3]==='true') { ?>
                             <?php echo '<div class="account_link-element_state"></div>'; ?>
-                            <?php echo '<a href=createlink.php?change='.$rows[0].'>desactiver</a>'; ?>
+                            <?php echo '<a href=createlink.php?change='.$rows[0].'>deactivate</a>'; ?>
                         <?php } else { ?>
                             <?php echo '<div class="account_link-element_stateoff"></div>'; ?>
-                            <?php echo '<a href=createlink.php?change='.$rows[0].'>activer</a>'; ?>
+                            <?php echo '<a href=createlink.php?change='.$rows[0].'>activate</a>'; ?>
                         <?php }; ?>
                             
                         <?php echo '<div class="account_link-element_views">'; ?>

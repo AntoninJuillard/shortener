@@ -158,6 +158,7 @@ if(isset($_GET['change']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
     <link rel="stylesheet" href="createlink.css">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
 </head>
 <body>
     <div class="home_container_createlink">
