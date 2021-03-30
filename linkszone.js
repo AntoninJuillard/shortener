@@ -4,7 +4,7 @@ const homeContainer = document.querySelector('.home_container_createlink')
 const accountButton = homeContainer.querySelector('.account-button')
 const homeForm = homeContainer.querySelector('.home_form')
 
-
+const closeContainerButton = accountContainer.querySelector('.account_container_close-button')
 // Si le bouton est en mode ouvrir la partie mon compte
 // ou en mode se déconnecter 
 let accountButtonChange = false
@@ -20,9 +20,18 @@ accountButton.addEventListener('click',() =>
         console.log(accountButtonChange);
     } else {
         accountContainer.classList.add('account_container_reveal')
+        accountContainer.classList.remove('account_container_close')
         homeForm.classList.add('home_form_moove')
         accountButton.textContent = "log out"
         accountButtonChange = true
         console.log(accountButtonChange);
     }
+})
+
+closeContainerButton.addEventListener('click', () => 
+{
+    accountContainer.classList.remove('account_container_reveal')
+    accountContainer.classList.add('account_container_close')
+    accountButton.textContent = 'MY ACCOUNT'
+    accountButtonChange = false
 })

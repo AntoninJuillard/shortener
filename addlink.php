@@ -48,7 +48,7 @@ if(isset($_POST['submitlink']))
     $sql = "CREATE TABLE IF NOT EXISTS urlsystem (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     urlbase VARCHAR(100) NOT NULL,
-    urlshort VARCHAR(100) NOT NULL,
+    urlshort VARCHAR(300) NOT NULL,
     activated VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     views INT 
