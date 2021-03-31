@@ -179,6 +179,7 @@ body{
     margin-top: 0.764vw;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 .account_link-element_title{
@@ -231,7 +232,6 @@ body{
     text-decoration: none;
     color: black;
     border: 1px solid #000000;
-    /* border-bottom: 1px solid #000000; */
     padding: 1.3px;
     border-radius: 7px;
     background: #C4C4C4;
@@ -294,4 +294,19 @@ body{
     100%{
         transform: translateX(0);
     }
+}
+
+.account_link-element_short-title{
+    position: absolute;
+    left: 24.2px;
+    width: 16.66vw;
+    overflow: scroll;
+    background: #A98080;
+    opacity: 0;
+    transition: 0.18s ease-in-out;
+    font-size: 0.8em;
+}
+
+.account_link-element:hover .account_link-element_short-title{
+    opacity: 1;
 }

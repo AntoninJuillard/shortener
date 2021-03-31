@@ -185,6 +185,9 @@ if(isset($_GET['change']))
                         <?php echo '<div class="account_link-element_title">'; ?>
                             <?php print_r($rows[1]); ?>
                         <?php echo '</div>'; ?>
+                        <?php echo '<div class="account_link-element_short-title">'; ?>
+                            <?php echo 'http://localhost:8888/shortener/v.php?key='.$rows[2]; ?>
+                        <?php echo '</div>'; ?>
                         <!-- change the display of the button depending on whether the link is enabled or not -->
                         <?php if($rows[3]==='true') { ?>
                             <?php echo '<div class="account_link-element_state"></div>'; ?>
