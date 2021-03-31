@@ -1,6 +1,6 @@
 <?php
 // EVERYTHING TO REGISTER A NEW USER : 
-// check that the form works
+// check that the form is sent
 // source for the isset: https://www.php.net/manual/fr/function.isset.php
 if(isset($_POST['submit']))
 {
@@ -40,7 +40,7 @@ if(isset($_POST['submit']))
     email VARCHAR(100) NOT NULL,
     pass VARCHAR(100) NOT NULL
     )";
-    // make the request 
+    
     $conn->query($sql);
 
     // select the rows of the table where the email and the password appear
@@ -48,7 +48,7 @@ if(isset($_POST['submit']))
 
     $sql = "SELECT * FROM users WHERE email='$email' AND pass='$password'";
     // source help: https://stackoverflow.com/questions/42050614/mysqli-queryconn-sql-or-conn-querysql
-    // make the request = 
+    
     $result = $conn->query($sql);
 
     // check if there are results to the query (= if the identifiers are in the database)

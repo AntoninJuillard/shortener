@@ -1,6 +1,4 @@
-<?php
-    
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shortener</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="../css/registration.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
 </head>
 <body>
@@ -21,7 +19,7 @@
             <input type="submit" value="Register" name="submit" class="register_button"/>
             <div class="separation"></div>
 
-            <a href="connection.php" class="login_submit_button">Login</a>
+            <a href="../index.php" class="login_submit_button">Login</a>
         </form>
     </div>
 </body>

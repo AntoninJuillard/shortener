@@ -7,20 +7,19 @@ if(isset($_POST['submit']))
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
+    // source help to manage the database: https://www.w3schools.com/php/php_mysql_intro.asp
+    // access the server from Php
     $servername = 'localhost';
     $username = 'root';
     $userpassword = 'root';
 
-    // source help to manage the database: https://www.w3schools.com/php/php_mysql_intro.asp
-    // access the server from Php
     $connect = new mysqli($servername, $username, $userpassword);
 
     // connect to the database
     $conn = new mysqli($servername, $username, $userpassword, 'logindb');
 
-    // Check the connection / source help: https://www.w3schools.com/php/php_mysql_insert.asp
-    // request
+    // Check the connection / source help: https://www.w3schools.com/php/php_mysql_create_table.asp 
+  
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
@@ -34,15 +33,13 @@ if(isset($_POST['submit']))
     $result = $conn->query($sql);
 
     // check if there are results to the query (= if the identifiers are in the database)
-
     if ($result->num_rows > 0) { 
         session_start(); 
         $_SESSION['email'] = $email;
         include 'createlink.php'; 
     } else { 
-        include 'connection.php'; 
+        include 'index.php'; 
     }; 
-
 }
 ?>
 
