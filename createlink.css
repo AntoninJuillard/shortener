@@ -227,6 +227,15 @@ body{
     display: flex;
     width: 5.625vw;
     justify-content: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #000000;
+    /* border-bottom: 1px solid #000000; */
+    padding: 1.3px;
+    border-radius: 7px;
+    background: #C4C4C4;
+    box-shadow: 0 2px 4px 0 #00000040;
 }
 
 .short-url-container{
