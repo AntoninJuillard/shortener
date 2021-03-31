@@ -185,6 +185,6 @@ if(isset($_GET['change']))
             </div>
         </div>
     </div>
-    <script src="../linkszone.js"></script>
+    <script src="../javascript/linkszone.js"></script>
 </body>
 </html>
