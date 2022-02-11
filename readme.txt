@@ -12,5 +12,3 @@ There is a problem on the createlink.php file : you cannot reactivate urls
 that have been deactivated.
 
 The website creates databases and tables automatically. 
-
-You need to start by going to index.php.
